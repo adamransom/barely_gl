@@ -66,12 +66,8 @@ void Shader::load()
  */
 void Shader::compile()
 {
-  GLchar const* string_ptr;
-  GLint status;
-  GLint info_length;
-  std::string info_log;
 
-  string_ptr = shader_string_.c_str();
+  GLchar const* string_ptr = shader_string_.c_str();
 
   glShaderSource(id_,         // ID of shader object
                  1,           // number of elements in string array
@@ -81,12 +77,15 @@ void Shader::compile()
 
   glCompileShader(id_);
 
+  GLint status;
   glGetShaderiv(id_, GL_COMPILE_STATUS, &status);
 
   if (status == GL_FALSE)
   {
+    GLint info_length;
     glGetShaderiv(id_, GL_INFO_LOG_LENGTH, &info_length);
 
+    std::string info_log;
     info_log.resize(info_length);
     glGetShaderInfoLog(id_, info_length, NULL, &info_log[0]);
 

@@ -69,10 +69,6 @@ ShaderProgram::~ShaderProgram()
  */
 void ShaderProgram::link()
 {
-  GLint status;
-  GLint info_length;
-  std::string info_log;
-
   id_ = glCreateProgram();
 
   if (id_ != 0)
@@ -82,6 +78,7 @@ void ShaderProgram::link()
 
     glLinkProgram(id_);
 
+    GLint status;
     glGetProgramiv(id_, GL_LINK_STATUS, &status);
 
     glDetachShader(id_, vertex_shader_->id());
@@ -89,8 +86,10 @@ void ShaderProgram::link()
 
     if (status == GL_FALSE)
     {
+      GLint info_length;
       glGetProgramiv(id_, GL_INFO_LOG_LENGTH, &info_length);
 
+      std::string info_log;
       info_log.resize(info_length);
       glGetProgramInfoLog(id_, info_length, NULL, &info_log[0]);
 
