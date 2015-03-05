@@ -12,7 +12,7 @@
 #include <OpenGL/gl3.h>
 
 namespace GL {
-Shader::Shader(const std::string& file_path, GLenum shader_type)
+Shader::Shader(const std::string& file_path, const GLenum shader_type)
   : shader_type_(shader_type)
   , file_path_(file_path)
 {

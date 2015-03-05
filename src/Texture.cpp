@@ -8,7 +8,7 @@
 #include "Exception.h"
 
 namespace GL {
-Texture::Texture(int width, int height, const void* pixels)
+Texture::Texture(const int width, const int height, const void* pixels)
   : width_(width)
   , height_(height)
 {
@@ -19,7 +19,7 @@ Texture::Texture(int width, int height, const void* pixels)
   unbind();
 }
 
-void Texture::bind()
+void Texture::bind() const
 {
   glBindTexture(GL_TEXTURE_2D, id_);
 }
@@ -43,7 +43,7 @@ void Texture::set_data(const void* data)
               );
 }
 
-void Texture::unbind()
+void Texture::unbind() const
 {
   glBindTexture(GL_TEXTURE_2D, 0);
 }

@@ -35,14 +35,14 @@ public:
   /**
    * @brief Binds the buffer
    */
-  void bind();
+  void bind() const;
 
   /**
    * @brief Draws the buffer with the specified mode
    *
    * @param mode drawing mode (usually GL_TRIANGLES)
    */
-  void draw(GLenum mode);
+  void draw(GLenum mode) const;
 
   /**
    * @brief Draws the buffer with the specified mode using the indices specified
@@ -50,26 +50,26 @@ public:
    * @param mode drawing mode (usually GL_TRIANGLES)
    * @param indices the index buffer object to draw the vertices with
    */
-  void draw(GLenum mode, IndexBufferObject* indices);
+  void draw(GLenum mode, const IndexBufferObject* indices) const;
 
   /**
    * @brief Unbinds the buffer
    */
-  void unbind();
+  void unbind() const;
 
   /**
    * @brief Set the vertices for the buffer
    *
    * @param vertices array of floats to be used as vertices
    */
-  void set_vertices(const std::vector<float> vertices);
+  void set_vertices(std::vector<float> vertices);
 
   /**
    * @brief Set the attributes for the vertices
    *
    * @param attributes the attributes for the corresponding vertices
    */
-  void set_attributes(const std::vector<VertexAttribute> attributes);
+  void set_attributes(std::vector<VertexAttribute> attributes);
 
 private:
   /**
@@ -77,8 +77,8 @@ private:
    */
   void generate_buffer();
 
-  void draw_arrays(GLenum mode, GLsizei count);
-  void draw_elements(GLenum mode, IndexBufferObject* indices);
+  void draw_arrays(GLenum mode, GLsizei count) const;
+  void draw_elements(GLenum mode, const IndexBufferObject* indices) const;
 
   /**
    * @brief Destroy the buffer

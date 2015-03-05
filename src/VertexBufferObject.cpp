@@ -10,14 +10,14 @@
 #include "IndexBufferObject.h"
 
 namespace GL {
-VertexBufferObject::VertexBufferObject(GLenum target, GLenum usage)
+VertexBufferObject::VertexBufferObject(const GLenum target, const GLenum usage)
   : target_(target)
   , usage_(usage)
 {
   generate_buffer();
 }
 
-void VertexBufferObject::bind()
+void VertexBufferObject::bind() const
 {
   glBindBuffer(target_, id_);
 }
@@ -47,14 +47,15 @@ void VertexBufferObject::set_attributes(const std::vector<VertexAttribute> attri
 /*
  * Draws the vertices using the supplied attributes in arrays mode
  */
-void VertexBufferObject::draw(GLenum mode)
+void VertexBufferObject::draw(const GLenum mode) const
 {
   draw(mode, nullptr);
 }
 
-void VertexBufferObject::draw(GLenum mode, IndexBufferObject* indices)
+void VertexBufferObject::draw(const GLenum mode, const IndexBufferObject* indices) const
 {
   int cur_offset = 0;
+
   /*
    * Each vertex contains the position for the vertex and some extra data. To
    * let the shader know which data is which you specify attributes. For
@@ -102,7 +103,7 @@ void VertexBufferObject::draw(GLenum mode, IndexBufferObject* indices)
   }
 }
 
-void VertexBufferObject::unbind()
+void VertexBufferObject::unbind() const
 {
   glBindBuffer(target_, 0);
 }
@@ -125,12 +126,12 @@ void VertexBufferObject::generate_buffer()
   if (id_ == 0) throw Exception("Could not generate buffer");
 }
 
-void VertexBufferObject::draw_arrays(GLenum mode, GLsizei count)
+void VertexBufferObject::draw_arrays(const GLenum mode, const GLsizei count) const
 {
   glDrawArrays(mode, 0, count);
 }
 
-void VertexBufferObject::draw_elements(GLenum mode, IndexBufferObject* indices)
+void VertexBufferObject::draw_elements(const GLenum mode, const IndexBufferObject* indices) const
 {
   glDrawElements(mode, static_cast<GLsizei>(indices->size()), GL_UNSIGNED_INT, 0);
 }

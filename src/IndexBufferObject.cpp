@@ -9,14 +9,14 @@
 #include "Exception.h"
 
 namespace GL {
-IndexBufferObject::IndexBufferObject(GLenum target, GLenum usage)
+IndexBufferObject::IndexBufferObject(const GLenum target, const GLenum usage)
   : target_(target)
   , usage_(usage)
 {
   generate_buffer();
 }
 
-void IndexBufferObject::bind()
+void IndexBufferObject::bind() const
 {
   glBindBuffer(target_, id_);
 }
@@ -31,7 +31,7 @@ void IndexBufferObject::set_indices(const std::vector<int> indices)
   glBufferData(target_, indices.size() * sizeof(int), indices.data(), usage_);
 }
 
-void IndexBufferObject::unbind()
+void IndexBufferObject::unbind() const
 {
   glBindBuffer(target_, 0);
 }

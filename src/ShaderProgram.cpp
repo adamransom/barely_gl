@@ -12,14 +12,14 @@
 
 namespace GL {
 
-ShaderProgram::ShaderProgram(Shader* vertex_shader, Shader* fragment_shader)
+ShaderProgram::ShaderProgram(const Shader* vertex_shader, const Shader* fragment_shader)
   : vertex_shader_(vertex_shader)
   , fragment_shader_(fragment_shader)
 {
   link();
 }
 
-void ShaderProgram::use()
+void ShaderProgram::use() const
 {
   glUseProgram(id_);
 }
@@ -46,7 +46,7 @@ void ShaderProgram::set_uniform(const std::string& name, const glm::mat4 matrix)
   }
 }
 
-void ShaderProgram::unbind()
+void ShaderProgram::unbind() const
 {
   glUseProgram(0);
 }
@@ -103,7 +103,7 @@ void ShaderProgram::link()
   }
 }
 
-GLint ShaderProgram::get_uniform_location(const std::string& name)
+GLint ShaderProgram::get_uniform_location(const std::string& name) const
 {
   return glGetUniformLocation(id_, name.c_str());
 }

@@ -32,7 +32,7 @@ public:
   /**
    * @brief Binds the texture for use
    */
-  void bind();
+  void bind() const;
 
   /**
    * @brief Sets the raw data of the texture
@@ -42,7 +42,7 @@ public:
   /**
    * @brief Unbinds the texture
    */
-  void unbind();
+  void unbind() const;
 
   /**
    * @brief Gets the width of the texture

@@ -32,12 +32,12 @@ public:
   /**
    * @brief Binds the buffer
    */
-  void bind();
+  void bind() const;
 
   /**
    * @brief Unbinds the buffer
    */
-  void unbind();
+  void unbind() const;
 
   size_t size() const { return indices_.size(); }
 
@@ -46,7 +46,7 @@ public:
    *
    * @param vertices array of floats to be used as vertices
    */
-  void set_indices(const std::vector<int> indices);
+  void set_indices(std::vector<int> indices);
 
 private:
   /**
