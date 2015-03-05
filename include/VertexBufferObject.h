@@ -77,7 +77,20 @@ private:
    */
   void generate_buffer();
 
+  /**
+   * @brief Draws the buffer using glDrawArrays
+   *
+   * @param mode drawing mode (usually GL_TRIANGLES)
+   * @param count the number of triangles to draw
+   */
   void draw_arrays(GLenum mode, GLsizei count) const;
+
+  /**
+   * @brief Draws the buffer using glElements
+   *
+   * @param mode drawing mode (usually GL_TRIANGLES)
+   * @param indices the IBO to use as an index into the VBO
+   */
   void draw_elements(GLenum mode, const IndexBufferObject* indices) const;
 
   /**

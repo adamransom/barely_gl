@@ -39,6 +39,11 @@ public:
    */
   void unbind() const;
 
+  /**
+   * @brief Gets the number of indices
+   *
+   * @returns the number of indices
+   */
   size_t size() const { return indices_.size(); }
 
   /**
