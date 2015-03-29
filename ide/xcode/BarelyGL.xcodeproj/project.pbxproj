@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66B2D3BA1AC7E03D00AB0CAF /* IndexBufferObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D3B51AC7E03D00AB0CAF /* IndexBufferObject.cpp */; };
+		66B2D3BB1AC7E03D00AB0CAF /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D3B61AC7E03D00AB0CAF /* Shader.cpp */; };
+		66B2D3BC1AC7E03D00AB0CAF /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D3B71AC7E03D00AB0CAF /* ShaderProgram.cpp */; };
+		66B2D3BD1AC7E03D00AB0CAF /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D3B81AC7E03D00AB0CAF /* Texture.cpp */; };
+		66B2D3BE1AC7E03D00AB0CAF /* VertexBufferObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66B2D3B91AC7E03D00AB0CAF /* VertexBufferObject.cpp */; };
+		66B2D3C01AC7E08300AB0CAF /* GL.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3AC1AC7E01F00AB0CAF /* GL.h */; };
+		66B2D3C11AC7E08300AB0CAF /* IndexBufferObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3AD1AC7E01F00AB0CAF /* IndexBufferObject.h */; };
+		66B2D3C21AC7E08300AB0CAF /* Shader.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3AE1AC7E01F00AB0CAF /* Shader.h */; };
+		66B2D3C31AC7E08300AB0CAF /* ShaderProgram.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3AF1AC7E01F00AB0CAF /* ShaderProgram.h */; };
+		66B2D3C41AC7E08300AB0CAF /* Texture.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3B01AC7E01F00AB0CAF /* Texture.h */; };
+		66B2D3C51AC7E08300AB0CAF /* VertexAttribute.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3B11AC7E01F00AB0CAF /* VertexAttribute.h */; };
+		66B2D3C61AC7E08300AB0CAF /* VertexBufferObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3B21AC7E01F00AB0CAF /* VertexBufferObject.h */; };
+		66B2D3C71AC7E0BF00AB0CAF /* Exception.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3AB1AC7E01F00AB0CAF /* Exception.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		668C65DA1A8E272600ADB924 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				66B2D3C71AC7E0BF00AB0CAF /* Exception.h in CopyFiles */,
+				66B2D3C01AC7E08300AB0CAF /* GL.h in CopyFiles */,
+				66B2D3C11AC7E08300AB0CAF /* IndexBufferObject.h in CopyFiles */,
+				66B2D3C21AC7E08300AB0CAF /* Shader.h in CopyFiles */,
+				66B2D3C31AC7E08300AB0CAF /* ShaderProgram.h in CopyFiles */,
+				66B2D3C41AC7E08300AB0CAF /* Texture.h in CopyFiles */,
+				66B2D3C51AC7E08300AB0CAF /* VertexAttribute.h in CopyFiles */,
+				66B2D3C61AC7E08300AB0CAF /* VertexBufferObject.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		668C65831A8E214100ADB924 /* libBarelyGL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBarelyGL.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B2D3AB1AC7E01F00AB0CAF /* Exception.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		66B2D3AC1AC7E01F00AB0CAF /* GL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GL.h; sourceTree = "<group>"; };
+		66B2D3AD1AC7E01F00AB0CAF /* IndexBufferObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexBufferObject.h; sourceTree = "<group>"; };
+		66B2D3AE1AC7E01F00AB0CAF /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		66B2D3AF1AC7E01F00AB0CAF /* ShaderProgram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderProgram.h; sourceTree = "<group>"; };
+		66B2D3B01AC7E01F00AB0CAF /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		66B2D3B11AC7E01F00AB0CAF /* VertexAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexAttribute.h; sourceTree = "<group>"; };
+		66B2D3B21AC7E01F00AB0CAF /* VertexBufferObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexBufferObject.h; sourceTree = "<group>"; };
+		66B2D3B41AC7E03D00AB0CAF /* .tags */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .tags; sourceTree = "<group>"; };
+		66B2D3B51AC7E03D00AB0CAF /* IndexBufferObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexBufferObject.cpp; sourceTree = "<group>"; };
+		66B2D3B61AC7E03D00AB0CAF /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		66B2D3B71AC7E03D00AB0CAF /* ShaderProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderProgram.cpp; sourceTree = "<group>"; };
+		66B2D3B81AC7E03D00AB0CAF /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		66B2D3B91AC7E03D00AB0CAF /* VertexBufferObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexBufferObject.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		668C65801A8E214100ADB924 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		668C657A1A8E214100ADB924 = {
+			isa = PBXGroup;
+			children = (
+				66B2D3AA1AC7E01E00AB0CAF /* include */,
+				66B2D3B31AC7E03D00AB0CAF /* src */,
+				668C65841A8E214100ADB924 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		668C65841A8E214100ADB924 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				668C65831A8E214100ADB924 /* libBarelyGL.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66B2D3AA1AC7E01E00AB0CAF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				66B2D3AB1AC7E01F00AB0CAF /* Exception.h */,
+				66B2D3AC1AC7E01F00AB0CAF /* GL.h */,
+				66B2D3AD1AC7E01F00AB0CAF /* IndexBufferObject.h */,
+				66B2D3AE1AC7E01F00AB0CAF /* Shader.h */,
+				66B2D3AF1AC7E01F00AB0CAF /* ShaderProgram.h */,
+				66B2D3B01AC7E01F00AB0CAF /* Texture.h */,
+				66B2D3B11AC7E01F00AB0CAF /* VertexAttribute.h */,
+				66B2D3B21AC7E01F00AB0CAF /* VertexBufferObject.h */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = "<group>";
+		};
+		66B2D3B31AC7E03D00AB0CAF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				66B2D3B41AC7E03D00AB0CAF /* .tags */,
+				66B2D3B51AC7E03D00AB0CAF /* IndexBufferObject.cpp */,
+				66B2D3B61AC7E03D00AB0CAF /* Shader.cpp */,
+				66B2D3B71AC7E03D00AB0CAF /* ShaderProgram.cpp */,
+				66B2D3B81AC7E03D00AB0CAF /* Texture.cpp */,
+				66B2D3B91AC7E03D00AB0CAF /* VertexBufferObject.cpp */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		668C65821A8E214100ADB924 /* BarelyGL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 668C65871A8E214100ADB924 /* Build configuration list for PBXNativeTarget "BarelyGL" */;
+			buildPhases = (
+				668C657F1A8E214100ADB924 /* Sources */,
+				668C65801A8E214100ADB924 /* Frameworks */,
+				668C65DA1A8E272600ADB924 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarelyGL;
+			productName = GL;
+			productReference = 668C65831A8E214100ADB924 /* libBarelyGL.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		668C657B1A8E214100ADB924 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Adam Ransom";
+				TargetAttributes = {
+					668C65821A8E214100ADB924 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 668C657E1A8E214100ADB924 /* Build configuration list for PBXProject "BarelyGL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 668C657A1A8E214100ADB924;
+			productRefGroup = 668C65841A8E214100ADB924 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				668C65821A8E214100ADB924 /* BarelyGL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		668C657F1A8E214100ADB924 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B2D3BC1AC7E03D00AB0CAF /* ShaderProgram.cpp in Sources */,
+				66B2D3BE1AC7E03D00AB0CAF /* VertexBufferObject.cpp in Sources */,
+				66B2D3BD1AC7E03D00AB0CAF /* Texture.cpp in Sources */,
+				66B2D3BB1AC7E03D00AB0CAF /* Shader.cpp in Sources */,
+				66B2D3BA1AC7E03D00AB0CAF /* IndexBufferObject.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		668C65851A8E214100ADB924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		668C65861A8E214100ADB924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		668C65881A8E214100ADB924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = include;
+				WARNING_CFLAGS = (
+					"-Wextra",
+					"-Wall",
+				);
+			};
+			name = Debug;
+		};
+		668C65891A8E214100ADB924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = include;
+				WARNING_CFLAGS = (
+					"-Wextra",
+					"-Wall",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		668C657E1A8E214100ADB924 /* Build configuration list for PBXProject "BarelyGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				668C65851A8E214100ADB924 /* Debug */,
+				668C65861A8E214100ADB924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		668C65871A8E214100ADB924 /* Build configuration list for PBXNativeTarget "BarelyGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				668C65881A8E214100ADB924 /* Debug */,
+				668C65891A8E214100ADB924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 668C657B1A8E214100ADB924 /* Project object */;
+}
