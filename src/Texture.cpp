@@ -8,9 +8,10 @@
 #include "Exception.h"
 
 namespace GL {
-Texture::Texture(const int width, const int height, const void* pixels)
+Texture::Texture(const int width, const int height, GLenum format, const void* pixels)
   : width_(width)
   , height_(height)
+  , format_(format)
 {
   generate();
   bind();
@@ -33,11 +34,11 @@ void Texture::set_data(const void* data)
 
   glTexImage2D(GL_TEXTURE_2D,    // target of the texture
                0,                // mipmap level
-               GL_RGB,           // internal color format
+               format_,          // internal color format
                width_,           // width of texture
                height_,          // height of texture
                0,                // border (must be 0)
-               GL_BGR,           // format of texture being uploaded
+               format_,          // format of texture being uploaded
                GL_UNSIGNED_BYTE, // type of pixel data being uploaded
                data_             // pixel data
               );

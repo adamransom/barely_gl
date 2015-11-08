@@ -22,11 +22,12 @@ public:
    *
    * @param width width of the texture
    * @param height height of the texture
+   * @param format pixel format of the texture
    * @param pixels raw pixel data of the texture
    *
    * @throws GL::Exception if the object fails to be constructed
    */
-  Texture(int width, int height, const void* pixels);
+  Texture(int width, int height, GLenum format, const void* pixels);
   ~Texture();
 
   /**
@@ -87,6 +88,8 @@ private:
   int width_;
   /// The height of the texture
   int height_;
+  /// The pixel format of the texture
+  GLenum format_;
   /// The raw data of the texture
   const void* data_;
 };
