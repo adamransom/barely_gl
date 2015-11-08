@@ -1,12 +1,12 @@
 //
-// IndexBufferObject.cpp
+// index_buffer_object.cpp
 // Copyright (c) 2015 Adam Ransom
 //
 
-#include "IndexBufferObject.h"
-#include <OpenGL/gl3.h>
 #include <iostream>
-#include "Exception.h"
+#include <OpenGL/gl3.h>
+#include "index_buffer_object.h"
+#include "exception.h"
 
 namespace GL {
 IndexBufferObject::IndexBufferObject(const GLenum target, const GLenum usage)

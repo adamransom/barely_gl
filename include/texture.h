@@ -1,5 +1,5 @@
 //
-// Texture.h
+// texture.h
 // Copyright (c) 2015 Adam Ransom
 //
 

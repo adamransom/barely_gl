@@ -1,5 +1,5 @@
 //
-// Shader.h
+// shader.h
 // Copyright (c) 2015 Adam Ransom
 //
 

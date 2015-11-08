@@ -1,15 +1,14 @@
- //
-// Shader.cpp
+//
+// shader.cpp
 // Copyright (c) 2015 Adam Ransom
 //
 
 #include <fstream>
 #include <sstream>
 #include <vector>
-
-#include "Shader.h"
-#include "Exception.h"
 #include <OpenGL/gl3.h>
+#include "shader.h"
+#include "exception.h"
 
 namespace GL {
 Shader::Shader(const std::string& file_path, const GLenum shader_type)

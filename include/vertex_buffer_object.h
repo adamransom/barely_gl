@@ -1,5 +1,5 @@
 //
-// VertexBufferObject.h
+// vertex_buffer_object.h
 // Copyright (c) 2015 Adam Ransom
 //
 
@@ -8,7 +8,7 @@
 
 #include <vector>
 #include <OpenGL/gltypes.h>
-#include "VertexAttribute.h"
+#include "vertex_attribute.h"
 
 namespace GL {
 class IndexBufferObject;

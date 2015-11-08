@@ -1,5 +1,5 @@
 //
-// IndexBufferObject.h
+// index_buffer_object.h
 // Copyright (c) 2015 Adam Ransom
 //
 

@@ -1,13 +1,13 @@
 //
-// VertexBufferObject.cpp
+// vertex_buffer_object.cpp
 // Copyright (c) 2015 Adam Ransom
 //
 
-#include "VertexBufferObject.h"
-#include <OpenGL/gl3.h>
 #include <iostream>
-#include "Exception.h"
-#include "IndexBufferObject.h"
+#include <OpenGL/gl3.h>
+#include "vertex_buffer_object.h"
+#include "index_buffer_object.h"
+#include "exception.h"
 
 namespace GL {
 VertexBufferObject::VertexBufferObject(const GLenum target, const GLenum usage)

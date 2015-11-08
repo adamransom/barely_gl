@@ -1,5 +1,5 @@
 //
-// Exception.h
+// exception.h
 // Copyright (c) 2015 Adam Ransom
 //
 

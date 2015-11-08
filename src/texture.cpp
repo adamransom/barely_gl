@@ -1,11 +1,11 @@
 //
-// Texture.cpp
+// texture.cpp
 // Copyright (c) 2015 Adam Ransom
 //
 
-#include "Texture.h"
 #include <OpenGL/gl3.h>
-#include "Exception.h"
+#include "texture.h"
+#include "exception.h"
 
 namespace GL {
 Texture::Texture(const int width, const int height, GLenum format, const void* pixels)

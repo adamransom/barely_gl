@@ -1,5 +1,5 @@
 //
-// VertexAttribute.h
+// vertex_attribute.h
 // Copyright (c) 2015 Adam Ransom
 //
 

@@ -1,17 +1,16 @@
 //
-// ShaderProgram.cpp
+// shader_program.cpp
 // Copyright (c) 2015 Adam Ransom
 //
 
-#include "ShaderProgram.h"
-#include "Shader.h"
-#include "Exception.h"
 #include <OpenGL/gl3.h>
-#include "glm/glm.hpp"
-#include "glm/gtc/type_ptr.hpp"
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include "shader_program.h"
+#include "shader.h"
+#include "exception.h"
 
 namespace GL {
-
 ShaderProgram::ShaderProgram(const Shader* vertex_shader, const Shader* fragment_shader)
   : vertex_shader_(vertex_shader)
   , fragment_shader_(fragment_shader)
