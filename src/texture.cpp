@@ -32,7 +32,7 @@ void Texture::set_data(const void* data)
 {
   glTexImage2D(GL_TEXTURE_2D,    // target of the texture
                0,                // mipmap level
-               format_,          // internal color format
+               GL_RGBA8,         // internal color format
                width_,           // width of texture
                height_,          // height of texture
                0,                // border (must be 0)
