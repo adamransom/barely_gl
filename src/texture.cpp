@@ -30,8 +30,6 @@ void Texture::bind() const
  */
 void Texture::set_data(const void* data)
 {
-  data_ = data;
-
   glTexImage2D(GL_TEXTURE_2D,    // target of the texture
                0,                // mipmap level
                format_,          // internal color format
@@ -40,7 +38,7 @@ void Texture::set_data(const void* data)
                0,                // border (must be 0)
                format_,          // format of texture being uploaded
                GL_UNSIGNED_BYTE, // type of pixel data being uploaded
-               data_             // pixel data
+               data              // pixel data
               );
 }
 

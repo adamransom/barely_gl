@@ -90,8 +90,6 @@ private:
   int height_;
   /// The pixel format of the texture
   GLenum format_;
-  /// The raw data of the texture
-  const void* data_;
 };
 }
 
