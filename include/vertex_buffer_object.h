@@ -3,14 +3,14 @@
 // Copyright (c) 2015 Adam Ransom
 //
 
-#ifndef GL_VERTEX_BUFFER_OBJECT_H
-#define GL_VERTEX_BUFFER_OBJECT_H
+#ifndef BGL_VERTEX_BUFFER_OBJECT_H
+#define BGL_VERTEX_BUFFER_OBJECT_H
 
 #include <vector>
 #include <OpenGL/gltypes.h>
 #include "vertex_attribute.h"
 
-namespace GL {
+namespace BarelyGL {
 class IndexBufferObject;
 
 /**
@@ -112,4 +112,4 @@ private:
   int vertex_size_ = 0;
 };
 }
-#endif /* defined(GL_VERTEX_BUFFER_OBJECT_H) */
+#endif /* defined(BGL_VERTEX_BUFFER_OBJECT_H) */

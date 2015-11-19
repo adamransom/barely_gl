@@ -10,7 +10,7 @@
 #include "shader.h"
 #include "exception.h"
 
-namespace GL {
+namespace BarelyGL {
 ShaderProgram::ShaderProgram(const Shader* vertex_shader, const Shader* fragment_shader)
   : vertex_shader_(vertex_shader)
   , fragment_shader_(fragment_shader)
@@ -113,4 +113,4 @@ void ShaderProgram::destroy()
     glDeleteProgram(id_);
   }
 }
-}
+} // end of namespace BarelyGL

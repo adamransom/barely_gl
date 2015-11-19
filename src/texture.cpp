@@ -7,7 +7,7 @@
 #include "texture.h"
 #include "exception.h"
 
-namespace GL {
+namespace BarelyGL {
 Texture::Texture(const int width, const int height, GLenum format, const void* pixels)
   : width_(width)
   , height_(height)
@@ -86,4 +86,4 @@ Texture::~Texture()
 {
   destroy();
 }
-}
+} // end of namespace BarelyGL

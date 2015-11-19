@@ -3,13 +3,13 @@
 // Copyright (c) 2015 Adam Ransom
 //
 
-#ifndef GL_TEXTURE_H
-#define GL_TEXTURE_H
+#ifndef BGL_TEXTURE_H
+#define BGL_TEXTURE_H
 
 #include <vector>
 #include <OpenGL/gltypes.h>
 
-namespace GL {
+namespace BarelyGL {
 /**
  * @class Texture
  * @brief Wrapper around OpenGL texture
@@ -95,4 +95,4 @@ private:
 };
 }
 
-#endif /* defined(GL_TEXTURE_H) */
+#endif /* defined(BGL_TEXTURE_H) */

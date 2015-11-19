@@ -10,7 +10,7 @@
 #include "shader.h"
 #include "exception.h"
 
-namespace GL {
+namespace BarelyGL {
 Shader::Shader(const std::string& file_path, const GLenum shader_type)
   : shader_type_(shader_type)
   , file_path_(file_path)
@@ -99,4 +99,4 @@ void Shader::destroy()
     glDeleteShader(id_);
   }
 }
-}
+} // end of namespace BarelyGL

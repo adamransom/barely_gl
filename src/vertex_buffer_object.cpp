@@ -9,7 +9,7 @@
 #include "index_buffer_object.h"
 #include "exception.h"
 
-namespace GL {
+namespace BarelyGL {
 VertexBufferObject::VertexBufferObject(const GLenum target, const GLenum usage)
   : target_(target)
   , usage_(usage)
@@ -143,4 +143,4 @@ void VertexBufferObject::destroy()
     glDeleteBuffers(1, &id_);
   }
 }
-}
+} // end of namespace BarelyGL

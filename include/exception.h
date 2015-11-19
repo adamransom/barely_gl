@@ -3,13 +3,13 @@
 // Copyright (c) 2015 Adam Ransom
 //
 
-#ifndef GL_EXCEPTION_H
-#define GL_EXCEPTION_H
+#ifndef BGL_EXCEPTION_H
+#define BGL_EXCEPTION_H
 
 #include <exception>
 #include <string>
 
-namespace GL {
+namespace BarelyGL {
 /**
  * @class Exception
  * @brief Simple exception specifically for OpenGL exceptions
@@ -34,4 +34,4 @@ private:
 };
 }
 
-#endif
+#endif // defined(BGL_GL_H)

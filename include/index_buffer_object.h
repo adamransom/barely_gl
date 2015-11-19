@@ -3,13 +3,13 @@
 // Copyright (c) 2015 Adam Ransom
 //
 
-#ifndef GL_INDEX_BUFFER_OBJECT_H
-#define GL_INDEX_BUFFER_OBJECT_H
+#ifndef BGL_INDEX_BUFFER_OBJECT_H
+#define BGL_INDEX_BUFFER_OBJECT_H
 
 #include <vector>
 #include <OpenGL/gltypes.h>
 
-namespace GL {
+namespace BarelyGL {
 /**
  * @class IndexBufferObject
  * @brief Wrapper around an OpenGL index buffer object (IBO)
@@ -75,4 +75,4 @@ private:
 };
 }
 
-#endif // defined(GL_INDEX_BUFFER_OBJECT_H)
+#endif // defined(BGL_INDEX_BUFFER_OBJECT_H)

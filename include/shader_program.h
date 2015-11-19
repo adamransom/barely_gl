@@ -3,14 +3,14 @@
 // Copyright (c) 2015 Adam Ransom
 //
 
-#ifndef GL_SHADERPROGRAM_H
-#define GL_SHADERPROGRAM_H
+#ifndef BGL_SHADER_PROGRAM_H
+#define BGL_SHADER_PROGRAM_H
 
 #include <OpenGL/gltypes.h>
 #include <string>
 #include <glm/fwd.hpp>
 
-namespace GL {
+namespace BarelyGL {
 class Shader;
 
 /**
@@ -78,4 +78,4 @@ private:
 };
 }
 
-#endif /* defined(GL_SHADERPROGRAM_H) */
+#endif /* defined(BGL_SHADER_PROGRAM_H) */

@@ -3,13 +3,13 @@
 // Copyright (c) 2015 Adam Ransom
 //
 
-#ifndef GL_SHADER_H
-#define GL_SHADER_H
+#ifndef BGL_SHADER_H
+#define BGL_SHADER_H
 
 #include <string>
 #include <OpenGL/gltypes.h>
 
-namespace GL {
+namespace BarelyGL {
 /**
  * @class Shader
  * @brief Wrapper around an OpenGL shader
@@ -65,4 +65,4 @@ private:
 };
 }
 
-#endif /* defined(GL_SHADER_H) */
+#endif /* defined(BGL_SHADER_H) */

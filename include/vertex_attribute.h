@@ -3,10 +3,10 @@
 // Copyright (c) 2015 Adam Ransom
 //
 
-#ifndef GL_VERTEX_ATTRIBUTE_H
-#define GL_VERTEX_ATTRIBUTE_H
+#ifndef BGL_VERTEX_ATTRIBUTE_H
+#define BGL_VERTEX_ATTRIBUTE_H
 
-namespace GL {
+namespace BarelyGL {
 /**
  * @struct VertexAttribute
  * @brief Describes a vertex attribute (only the size for now)
@@ -18,4 +18,4 @@ struct VertexAttribute
 };
 }
 
-#endif /* defined(GL_VERTEX_ATTRIBUTE_H) */
+#endif /* defined(BGL_VERTEX_ATTRIBUTE_H) */

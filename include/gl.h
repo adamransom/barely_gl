@@ -3,8 +3,8 @@
 // Copyright (c) 2015 Adam Ransom
 //
 
-#ifndef GL_H
-#define GL_H
+#ifndef BGL_GL_H
+#define BGL_GL_H
 
 #include "shader.h"
 #include "shader_program.h"
@@ -14,4 +14,4 @@
 #include "vertex_attribute.h"
 #include "exception.h"
 
-#endif // defined(GL_H)
+#endif // defined(BGL_GL_H)
