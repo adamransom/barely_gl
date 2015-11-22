@@ -51,7 +51,7 @@ public:
    *
    * @param vertices array of floats to be used as vertices
    */
-  void set_indices(std::vector<int> indices);
+  void set_indices(const std::vector<int> indices);
 
 private:
   /**

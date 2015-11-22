@@ -24,9 +24,9 @@ void IndexBufferObject::bind() const
 /*
  * Uploads the vertices to the buffer object
  */
-void IndexBufferObject::set_indices(const std::vector<int> indices)
+void IndexBufferObject::set_indices(std::vector<int> indices)
 {
-  indices_ = indices;
+  indices_ = std::move(indices);
 
   glBufferData(target_, indices.size() * sizeof(int), indices.data(), usage_);
 }

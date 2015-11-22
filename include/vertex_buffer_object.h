@@ -69,7 +69,7 @@ public:
    *
    * @param attributes the attributes for the corresponding vertices
    */
-  void set_attributes(std::vector<VertexAttribute> attributes);
+  void set_attributes(VertexAttributeArray attributes);
 
 private:
   /**

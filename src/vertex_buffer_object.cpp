@@ -25,16 +25,16 @@ void VertexBufferObject::bind() const
 /*
  * Uploads the vertices to the buffer object
  */
-void VertexBufferObject::set_vertices(const std::vector<float> vertices)
+void VertexBufferObject::set_vertices(std::vector<float> vertices)
 {
-  vertices_ = vertices;
+  vertices_ = std::move(vertices);
 
-  glBufferData(target_, vertices.size() * sizeof(float), vertices.data(), usage_);
+  glBufferData(target_, vertices_.size() * sizeof(float), vertices_.data(), usage_);
 }
 
-void VertexBufferObject::set_attributes(const std::vector<VertexAttribute> attributes)
+void VertexBufferObject::set_attributes(VertexAttributeArray attributes)
 {
-  attributes_ = attributes;
+  attributes_ = std::move(attributes);
   
   vertex_size_ = 0;
 
