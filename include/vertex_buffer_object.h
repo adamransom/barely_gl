@@ -107,7 +107,7 @@ private:
   /// The list of vertices
   std::vector<float> vertices_;
   /// The list of attributes for the vertices
-  std::vector<VertexAttribute> attributes_;
+  VertexAttributeArray attributes_;
   /// The amount of values per vertex
   int vertex_size_ = 0;
 };

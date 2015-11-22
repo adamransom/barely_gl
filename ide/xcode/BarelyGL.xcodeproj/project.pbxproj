@@ -20,6 +20,7 @@
 		66B2D3C51AC7E08300AB0CAF /* vertex_attribute.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3B11AC7E01F00AB0CAF /* vertex_attribute.h */; };
 		66B2D3C61AC7E08300AB0CAF /* vertex_buffer_object.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3B21AC7E01F00AB0CAF /* vertex_buffer_object.h */; };
 		66B2D3C71AC7E0BF00AB0CAF /* exception.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3AB1AC7E01F00AB0CAF /* exception.h */; };
+		66B4472D1BFE73B000BDB03D /* vertex_attribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66B4472C1BFE73B000BDB03D /* vertex_attribute.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,7 @@
 		66B2D3B71AC7E03D00AB0CAF /* shader_program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shader_program.cpp; sourceTree = "<group>"; };
 		66B2D3B81AC7E03D00AB0CAF /* texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
 		66B2D3B91AC7E03D00AB0CAF /* vertex_buffer_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vertex_buffer_object.cpp; sourceTree = "<group>"; };
+		66B4472C1BFE73B000BDB03D /* vertex_attribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vertex_attribute.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				66B2D3B71AC7E03D00AB0CAF /* shader_program.cpp */,
 				66B2D3B81AC7E03D00AB0CAF /* texture.cpp */,
 				66B2D3B91AC7E03D00AB0CAF /* vertex_buffer_object.cpp */,
+				66B4472C1BFE73B000BDB03D /* vertex_attribute.cpp */,
 			);
 			name = src;
 			path = ../../src;
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66B4472D1BFE73B000BDB03D /* vertex_attribute.cpp in Sources */,
 				66B2D3BC1AC7E03D00AB0CAF /* shader_program.cpp in Sources */,
 				66B2D3BE1AC7E03D00AB0CAF /* vertex_buffer_object.cpp in Sources */,
 				66B2D3BD1AC7E03D00AB0CAF /* texture.cpp in Sources */,
