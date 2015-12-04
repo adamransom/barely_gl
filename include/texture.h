@@ -22,12 +22,41 @@ public:
    *
    * @param width width of the texture
    * @param height height of the texture
-   * @param format pixel format of the texture
+   * @param format pixel format of the data
+   * @param internal_format format the texture should be stored as
+   * @param unpack_alignment the unpack alignment OpenGL uses (usually 4)
+   * @param pixels raw pixel data of the texture
+   *
+   * @throws GL::Exception if the object fails to be constructed
+   */
+  Texture(int width, int height, GLenum format, GLenum internal_format, uint8_t unpack_alignment,
+          const void* pixels);
+
+  /**
+   * @brief Creates a new texture and uploads the pixel data
+   *
+   * @param width width of the texture
+   * @param height height of the texture
+   * @param format pixel format of the data
+   * @param internal_format format the texture should be stored as
+   * @param pixels raw pixel data of the texture
+   *
+   * @throws GL::Exception if the object fails to be constructed
+   */
+  Texture(int width, int height, GLenum format, GLenum internal_format, const void* pixels);
+
+  /**
+   * @brief Creates a new texture and uploads the pixel data
+   *
+   * @param width width of the texture
+   * @param height height of the texture
+   * @param format pixel format of the data
    * @param pixels raw pixel data of the texture
    *
    * @throws GL::Exception if the object fails to be constructed
    */
   Texture(int width, int height, GLenum format, const void* pixels);
+
   ~Texture();
 
   /**
@@ -36,9 +65,17 @@ public:
   void bind() const;
 
   /**
-   * @brief Sets the raw data of the texture
+   * @brief Uploads raw data to part of the texture
+   *
+   * Note: Must call `bind()` first!
+   *
+   * @param x_offset the x offset into texture
+   * @param y_offset the y offset into texture
+   * @param width the width of the data being uploaded
+   * @param width the height of the data being uploaded
+   * @param data the raw pixel data to upload
    */
-  void set_data(const void*);
+  void sub_data(int x_offset, int y_offset, int width, int height, const void* data);
 
   /**
    * @brief Unbinds the texture
@@ -73,6 +110,14 @@ private:
   void generate();
 
   /**
+   * @brief Sets the raw data of the texture
+   *
+   * @param internal_format the format the texture should be stored as
+   * @param data the raw pixel data to upload
+   */
+  void set_data(GLenum internal_format, const void* data);
+
+  /**
    * @brief Sets the parameters for the texture
    */
   void set_parameters();
@@ -90,6 +135,8 @@ private:
   int height_;
   /// The pixel format of the texture
   GLenum format_;
+  /// The alignment used to unpack the data (usually 4)
+  uint8_t unpack_alignment_;
 };
 }
 
