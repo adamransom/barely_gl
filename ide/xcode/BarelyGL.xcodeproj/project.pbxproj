@@ -17,10 +17,12 @@
 		66B2D3C21AC7E08300AB0CAF /* shader.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3AE1AC7E01F00AB0CAF /* shader.h */; };
 		66B2D3C31AC7E08300AB0CAF /* shader_program.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3AF1AC7E01F00AB0CAF /* shader_program.h */; };
 		66B2D3C41AC7E08300AB0CAF /* texture.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3B01AC7E01F00AB0CAF /* texture.h */; };
-		66B2D3C51AC7E08300AB0CAF /* vertex_attribute.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3B11AC7E01F00AB0CAF /* vertex_attribute.h */; };
 		66B2D3C61AC7E08300AB0CAF /* vertex_buffer_object.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3B21AC7E01F00AB0CAF /* vertex_buffer_object.h */; };
 		66B2D3C71AC7E0BF00AB0CAF /* exception.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66B2D3AB1AC7E01F00AB0CAF /* exception.h */; };
-		66B4472D1BFE73B000BDB03D /* vertex_attribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66B4472C1BFE73B000BDB03D /* vertex_attribute.cpp */; settings = {ASSET_TAGS = (); }; };
+		66E6A9B81C28744100BC1F1C /* vertex_array_object.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66E6A9B51C286C3E00BC1F1C /* vertex_array_object.h */; };
+		66E6A9BB1C289CA100BC1F1C /* vertex_attribute_array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66E6A9BA1C289CA100BC1F1C /* vertex_attribute_array.cpp */; settings = {ASSET_TAGS = (); }; };
+		66E6A9BC1C28A0A500BC1F1C /* vertex_attribute_array.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66E6A9B91C2887A000BC1F1C /* vertex_attribute_array.h */; };
+		66E6A9BE1C28A40800BC1F1C /* vertex_array_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66E6A9BD1C28A40800BC1F1C /* vertex_array_object.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +37,9 @@
 				66B2D3C11AC7E08300AB0CAF /* index_buffer_object.h in CopyFiles */,
 				66B2D3C21AC7E08300AB0CAF /* shader.h in CopyFiles */,
 				66B2D3C31AC7E08300AB0CAF /* shader_program.h in CopyFiles */,
+				66E6A9B81C28744100BC1F1C /* vertex_array_object.h in CopyFiles */,
+				66E6A9BC1C28A0A500BC1F1C /* vertex_attribute_array.h in CopyFiles */,
 				66B2D3C41AC7E08300AB0CAF /* texture.h in CopyFiles */,
-				66B2D3C51AC7E08300AB0CAF /* vertex_attribute.h in CopyFiles */,
 				66B2D3C61AC7E08300AB0CAF /* vertex_buffer_object.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,14 +54,16 @@
 		66B2D3AE1AC7E01F00AB0CAF /* shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shader.h; sourceTree = "<group>"; };
 		66B2D3AF1AC7E01F00AB0CAF /* shader_program.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shader_program.h; sourceTree = "<group>"; };
 		66B2D3B01AC7E01F00AB0CAF /* texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
-		66B2D3B11AC7E01F00AB0CAF /* vertex_attribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vertex_attribute.h; sourceTree = "<group>"; };
 		66B2D3B21AC7E01F00AB0CAF /* vertex_buffer_object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vertex_buffer_object.h; sourceTree = "<group>"; };
 		66B2D3B51AC7E03D00AB0CAF /* index_buffer_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = index_buffer_object.cpp; sourceTree = "<group>"; };
 		66B2D3B61AC7E03D00AB0CAF /* shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shader.cpp; sourceTree = "<group>"; };
 		66B2D3B71AC7E03D00AB0CAF /* shader_program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shader_program.cpp; sourceTree = "<group>"; };
 		66B2D3B81AC7E03D00AB0CAF /* texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
 		66B2D3B91AC7E03D00AB0CAF /* vertex_buffer_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vertex_buffer_object.cpp; sourceTree = "<group>"; };
-		66B4472C1BFE73B000BDB03D /* vertex_attribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vertex_attribute.cpp; sourceTree = "<group>"; };
+		66E6A9B51C286C3E00BC1F1C /* vertex_array_object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vertex_array_object.h; sourceTree = "<group>"; };
+		66E6A9B91C2887A000BC1F1C /* vertex_attribute_array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vertex_attribute_array.h; sourceTree = "<group>"; };
+		66E6A9BA1C289CA100BC1F1C /* vertex_attribute_array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vertex_attribute_array.cpp; sourceTree = "<group>"; };
+		66E6A9BD1C28A40800BC1F1C /* vertex_array_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vertex_array_object.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +103,9 @@
 				66B2D3AE1AC7E01F00AB0CAF /* shader.h */,
 				66B2D3AF1AC7E01F00AB0CAF /* shader_program.h */,
 				66B2D3B01AC7E01F00AB0CAF /* texture.h */,
-				66B2D3B11AC7E01F00AB0CAF /* vertex_attribute.h */,
 				66B2D3B21AC7E01F00AB0CAF /* vertex_buffer_object.h */,
+				66E6A9B51C286C3E00BC1F1C /* vertex_array_object.h */,
+				66E6A9B91C2887A000BC1F1C /* vertex_attribute_array.h */,
 			);
 			name = include;
 			path = ../../include;
@@ -108,12 +114,13 @@
 		66B2D3B31AC7E03D00AB0CAF /* src */ = {
 			isa = PBXGroup;
 			children = (
+				66E6A9BD1C28A40800BC1F1C /* vertex_array_object.cpp */,
 				66B2D3B51AC7E03D00AB0CAF /* index_buffer_object.cpp */,
 				66B2D3B61AC7E03D00AB0CAF /* shader.cpp */,
 				66B2D3B71AC7E03D00AB0CAF /* shader_program.cpp */,
 				66B2D3B81AC7E03D00AB0CAF /* texture.cpp */,
 				66B2D3B91AC7E03D00AB0CAF /* vertex_buffer_object.cpp */,
-				66B4472C1BFE73B000BDB03D /* vertex_attribute.cpp */,
+				66E6A9BA1C289CA100BC1F1C /* vertex_attribute_array.cpp */,
 			);
 			name = src;
 			path = ../../src;
@@ -175,12 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66B4472D1BFE73B000BDB03D /* vertex_attribute.cpp in Sources */,
 				66B2D3BC1AC7E03D00AB0CAF /* shader_program.cpp in Sources */,
+				66E6A9BB1C289CA100BC1F1C /* vertex_attribute_array.cpp in Sources */,
 				66B2D3BE1AC7E03D00AB0CAF /* vertex_buffer_object.cpp in Sources */,
 				66B2D3BD1AC7E03D00AB0CAF /* texture.cpp in Sources */,
 				66B2D3BB1AC7E03D00AB0CAF /* shader.cpp in Sources */,
 				66B2D3BA1AC7E03D00AB0CAF /* index_buffer_object.cpp in Sources */,
+				66E6A9BE1C28A40800BC1F1C /* vertex_array_object.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

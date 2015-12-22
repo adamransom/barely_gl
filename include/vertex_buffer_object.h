@@ -8,7 +8,7 @@
 
 #include <vector>
 #include <OpenGL/gltypes.h>
-#include "vertex_attribute.h"
+#include "vertex_attribute_array.h"
 
 namespace BarelyGL {
 class IndexBufferObject;
@@ -24,8 +24,7 @@ public:
    * @brief Sets up a new VBO
    *
    * @param target type of buffer object (only supports GL_ARRAY_BUFFER for now)
-   * @param usage usage pattern of the buffer (only supports GL_STATIC_DRAW for
-   *              now)
+   * @param usage usage pattern of the buffer (GL_STATIC_DRAW etc)
    *
    * @throws GL::Exception if the object fails to be constructed
    */
@@ -38,19 +37,25 @@ public:
   void bind() const;
 
   /**
-   * @brief Draws the buffer with the specified mode
+   * @brief Initialize the buffer data store without uploading any data
    *
-   * @param mode drawing mode (usually GL_TRIANGLES)
+   * @param size the size of data store to allocate
    */
-  void draw(GLenum mode) const;
+  void init_buffer(GLsizeiptr size);
 
   /**
-   * @brief Draws the buffer with the specified mode using the indices specified
+   * @brief Set the vertices for the buffer, recreating the data store
    *
-   * @param mode drawing mode (usually GL_TRIANGLES)
-   * @param indices the index buffer object to draw the vertices with
+   * @param vertices array of floats to be used as vertices
    */
-  void draw(GLenum mode, const IndexBufferObject* indices) const;
+  void set_vertices(const std::vector<float>& vertices);
+
+  /**
+   * @brief Set the vertices for the buffer, replacing data in the store
+   *
+   * @param vertices array of floats to be used as vertices
+   */
+  void sub_vertices(const std::vector<float>& vertices, GLintptr offset = 0);
 
   /**
    * @brief Unbinds the buffer
@@ -58,40 +63,17 @@ public:
   void unbind() const;
 
   /**
-   * @brief Set the vertices for the buffer
+   * @brief Returns the number of vertices in the buffer
    *
-   * @param vertices array of floats to be used as vertices
+   * @return the number of vertices in the buffer
    */
-  void set_vertices(std::vector<float> vertices);
-
-  /**
-   * @brief Set the attributes for the vertices
-   *
-   * @param attributes the attributes for the corresponding vertices
-   */
-  void set_attributes(VertexAttributeArray attributes);
+  size_t size() const { return vertex_count_; }
 
 private:
   /**
    * @brief Generate the buffer
    */
   void generate_buffer();
-
-  /**
-   * @brief Draws the buffer using glDrawArrays
-   *
-   * @param mode drawing mode (usually GL_TRIANGLES)
-   * @param count the number of triangles to draw
-   */
-  void draw_arrays(GLenum mode, GLsizei count) const;
-
-  /**
-   * @brief Draws the buffer using glElements
-   *
-   * @param mode drawing mode (usually GL_TRIANGLES)
-   * @param indices the IBO to use as an index into the VBO
-   */
-  void draw_elements(GLenum mode, const IndexBufferObject* indices) const;
 
   /**
    * @brief Destroy the buffer
@@ -102,14 +84,10 @@ private:
   GLuint id_ = 0;
   /// The type of buffer object
   GLenum target_;
-  /// The usage partter of the buffer
+  /// The usage pattern of the buffer
   GLenum usage_;
-  /// The list of vertices
-  std::vector<float> vertices_;
-  /// The list of attributes for the vertices
-  VertexAttributeArray attributes_;
-  /// The amount of values per vertex
-  int vertex_size_ = 0;
+  /// The number of vertices in the buffer
+  size_t vertex_count_;
 };
 }
 #endif /* defined(BGL_VERTEX_BUFFER_OBJECT_H) */
